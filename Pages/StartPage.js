@@ -11,9 +11,11 @@ const navigation = useNavigation();
 
   return (
     <View style={styles.container}>
+    <StatusBar hidden={true}/>
+
       <SafeAreaView style={styles.viewM}>
         <View style={styles.textView}>
-          <Text style={styles.headerText}>My Robot Pet M1v</Text>
+          <Text style={styles.headerText}>ROBOT-M1  1.0.1v</Text> 
         </View>
         <View style={styles.view1}>
           <Image source={require("../images/robot1.png")}/>
@@ -21,7 +23,7 @@ const navigation = useNavigation();
         <View style={styles.view2}>
           <Pressable style={styles.btn} onPress={
             ()=> {
-              navigation.navigate("Home");
+              navigation.navigate("LogIn");
             }
           }>
             <Text style={styles.btnText}>Get Started</Text>
@@ -34,23 +36,24 @@ const navigation = useNavigation();
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: "#fff",
+    // flex: 1,
+    width:"100%",
+    height:"100%",
+    backgroundColor: "#000000",
     alignItems: "center",
     justifyContent: "center",
   },
   view1:{
-    marginTop:35,
     justifyContent:'center',
     alignItems:"center",
   }
   ,view2:{
     justifyContent:'center',
     alignItems:"center",
-    padding:50
+    padding:50,
   },
   btn: {
-    backgroundColor: "black",
+    backgroundColor: "#E41B17",
     width: "80%",
     height: 50,
     borderRadius: 10,
@@ -64,9 +67,12 @@ const styles = StyleSheet.create({
   },textView:{
     justifyContent:'center',
     alignItems:'center',
+    height:"20%"
   },headerText:{
-    fontSize:36,
+    marginTop:"10%",
+    fontSize:34,
     fontWeight:'900',
-    // color:'#E41B17'
+    color:'#E41B17'
+    
   }
 });
